@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./view-of-the-falls-gravity-falls-journal.ico">
     <title>Atividade: Passinho do Romano</title>
 </head>
@@ -13,38 +13,47 @@
 <body>
     <div class="container">
         <form id="form" class="form">
-            <label for="mensagem">Mensagem:</label>
-            <input class="mensagem" type="text" id="mensagem" placeholder="Digite sua mensagem aqui..." name="mensagem" />
-            <fieldset>
-                <legend>Selecione a cifra a ser usada na sua mensagem:</legend>
+            <label for="mensagem"><strong>MENSAGEM:</strong></label>
+            <textarea class="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui..."
+                name="mensagem"></textarea>
+            <fieldset class="caixaSelecao">
+                <legend class="tituloQuadro"><strong>Selecione a cifra a ser usada na sua mensagem:</strong></legend>
                 <div>
-                    <input type="checkbox" id="cifraDeCesar" name="cifraDeCesar" value="cifraDeCesar">
-                    <label for="cifraDeCesar">Cifra de César</label>
+                    <select id="cifras" name="cifras">
+                        <option value="">Selecionar cifra</option>
+                        <option value="cifraDeCesar" id="cifraDeCesar">Cifra de César</option>
+                        <option value="base64" id="base64">Base64</option>
+                    </select>
+
                     <fieldset id="incrementoUm" name="incrementoUm">
-                        <input type="radio" id="codificar" name="codificar" value="codificar">
+                        <input type="number" id="deslocamento" class="deslocamento" value="3"><br><br>
+                        <input type="radio" id="codificarCifraDeCesar" name="codificar" value="codificar">
                         <label for="codificar">CODIFICAR</label>
-                        <input type="radio" id="decodificar" name="decodificar" value="decodificar">
+                        <input type="radio" id="decodificarCifraDeCesar" name="decodificar" value="decodificar">
                         <label for="decodificar">DECODIFICAR</label><br>
-                        <button id="btnCodificar">Codificar Mensagem!</button>
-                        <button id="btnDecodificar">Decodificar Mensagem!</button>
+                        <button id="btnCodificarCifraDeCesar">Codificar Mensagem!</button>
+                        <button id="btnDecodificarCifraDeCesar">Decodificar Mensagem!</button>
                     </fieldset>
                 </div>
                 <div>
-                    <input type="checkbox" id="base64" name="base64" value="base64">
-                    <label for="base64">Base64</label>
+
                     <fieldset id="incrementoDois" name="incrementoDois">
                         <input type="radio" id="codificarBase64" name="codificarBase64" value="codificar">
                         <label for="codificar">CODIFICAR</label>
                         <input type="radio" id="decodificarBase64" name="decodificarBase64" value="decodificar">
                         <label for="decodificar">DECODIFICAR</label><br>
-                        <button id="btnCodificarBase64">Codificar Mensagem!</button>
-                        <button id="btnDecodificarBase64">Decodificar Mensagem!</button>
+                        <button type="submit" id="btnCodificarBase64">Codificar Mensagem!</button>
+                        <button type="submit" id="btnDecodificarBase64">Decodificar Mensagem!</button>
                     </fieldset>
                 </div>
             </fieldset>
+            <label for="resultado"><strong>RESULTADO:</strong></label>
+            <textarea class="resultado" id="resultado" placeholder="A Codificação/Decodificação vai aparecer aqui!"
+                name="resultado"></textarea>
+            <button class="btnReload" id="reload"><strong>LIMPAR</strong></button>
         </form>
     </div>
-    <script src="./index.js"></script>
+    <script src="./cipher.js"></script>
 </body>
 
 </html>
