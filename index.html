@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./view-of-the-falls-gravity-falls-journal.ico">
-    <title>Atividade: Passinho do Romano</title>
+    <title>Cipher</title>
 </head>
 
 <body>
@@ -21,32 +21,28 @@
                 <div>
                     <select id="cifras" name="cifras">
                         <option value="">Selecionar cifra</option>
-                        <option value="cifraDeCesar" id="cifraDeCesar">Cifra de César</option>
-                        <option value="base64" id="base64">Base64</option>
+                        <option value="1" id="cifraDeCesar">Cifra de César</option>
+                        <option value="2" id="base64">Base64</option>
                     </select>
 
-                    <fieldset id="incrementoUm" name="incrementoUm">
-                        <input type="number" id="deslocamento" class="deslocamento" value="3"><br><br>
-                        <input type="radio" id="codificarCifraDeCesar" name="codificar" value="codificar">
-                        <label for="codificar">CODIFICAR</label>
-                        <input type="radio" id="decodificarCifraDeCesar" name="decodificar" value="decodificar">
-                        <label for="decodificar">DECODIFICAR</label><br>
-                        <button id="btnCodificarCifraDeCesar">Codificar Mensagem!</button>
-                        <button id="btnDecodificarCifraDeCesar">Decodificar Mensagem!</button>
+                    <fieldset id="incremento" name="incremento">
+                        <input type="number" min="0" max="25" id="deslocamento" class="deslocamento" value="3"><br>
                     </fieldset>
-                </div>
-                <div>
 
-                    <fieldset id="incrementoDois" name="incrementoDois">
-                        <input type="radio" id="codificarBase64" name="codificarBase64" value="codificar">
+                    <div class="radiais" id="radiais">
+                        <input type="radio" id="codificar" name="radio" value="codificar">
                         <label for="codificar">CODIFICAR</label>
-                        <input type="radio" id="decodificarBase64" name="decodificarBase64" value="decodificar">
+
+                        <input type="radio" id="decodificar" name="radio" value="decodificar">
                         <label for="decodificar">DECODIFICAR</label><br>
-                        <button type="submit" id="btnCodificarBase64">Codificar Mensagem!</button>
-                        <button type="submit" id="btnDecodificarBase64">Decodificar Mensagem!</button>
-                    </fieldset>
+                    </div>
+
+                    <div id="btnGo">
+                    </div>
+
                 </div>
             </fieldset>
+
             <label for="resultado"><strong>RESULTADO:</strong></label>
             <textarea class="resultado" id="resultado" placeholder="A Codificação/Decodificação vai aparecer aqui!"
                 name="resultado"></textarea>
