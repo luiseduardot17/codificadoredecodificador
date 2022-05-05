@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./view-of-the-falls-gravity-falls-journal.ico">
+    <link rel="icon" href="./images/view-of-the-falls-gravity-falls-journal.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <title>Cipher</title>
 </head>
 
@@ -18,8 +21,8 @@
                 name="mensagem"></textarea>
             <fieldset class="caixaSelecao">
                 <legend class="tituloQuadro"><strong>Selecione a cifra a ser usada na sua mensagem:</strong></legend>
-                <div>
-                    <select id="cifras" name="cifras">
+                <div class="divCifras">
+                    <select id="cifras" class="cifras" name="cifras">
                         <option value="">Selecionar cifra</option>
                         <option value="1" id="cifraDeCesar">Cifra de César</option>
                         <option value="2" id="base64">Base64</option>
@@ -37,7 +40,7 @@
                         <label for="decodificar">DECODIFICAR</label><br>
                     </div>
 
-                    <div id="btnGo">
+                    <div id="btnGo" class="btnGo">
                     </div>
 
                 </div>
