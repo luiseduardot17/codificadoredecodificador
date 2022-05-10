@@ -108,6 +108,13 @@ function decodificaCesar() {
 function reload() {
   location.reload();
 };
+//VIEWPORT
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+Window.addEventListener('resize', () => {
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
 
 /*Cifra de César
  A B C D E F G H I J K  L  M
